@@ -1,0 +1,44 @@
+package Quiz;
+
+import java.util.Scanner;
+
+public class Quiz_IF {
+	public static void main(String[] args) {
+		
+		
+		//int score = new Scanner(System.in).nextInt();
+		Scanner sc = new Scanner(System.in);
+		int score;
+		score = sc.nextInt();
+		
+		System.out.println("학점을 입력하세요 : ");
+		
+		if ( score >= 90 ) {
+			System.out.println("A학점 입니다.");
+		}else if ( score >= 80 ) {
+			System.out.println("B학점 입니다.");
+		}else if ( score >= 70 ) {
+			System.out.println("C학점 입니다.");
+		}else if ( score >= 60 ){
+			System.out.println("D학점 입니다.");
+		}else {
+			System.out.println("F학점 입니다.");
+		}
+	}
+}
+
+/*
+문제] 점수 입력 받아서 평점(학점) 구하는 프로그램 작성
+	100~90 : A
+	89~80 : B
+	79~70 : C
+	69~60 : D
+	59~0 : F
+		
+		
+		1. 변수 선언
+		2. 메세지 출력 및 입력받기		
+		3. 처리(계산)
+		4. 결과출력(화면)
+		
+*/

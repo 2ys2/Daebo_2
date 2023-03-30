@@ -1,0 +1,36 @@
+package quiz;
+
+public class QuizEx01 {
+	
+	public static void main(String[] args) {
+		
+		int pay = 567890;
+		
+		int m = pay / 10000; //56
+		int mn = pay % 10000;
+
+		
+		
+		int ch = mn / 1000;
+		int chn = mn % 1000;
+		int ba = chn / 100;
+		int ban = chn % 100;
+		int sh = ban / 10;
+		
+		System.out.println("result : \n" + "만원 : " + m + "장");
+		System.out.println("천원 : " + ch + "장");
+		System.out.println("백원 : " + ba + "장");
+		System.out.println("십원 : " + sh + "개");
+		
+	}	
+}
+
+/* 문제1] 월급을 단위로 계산하기
+ * 	int pay = 567890;
+ * 
+ * 		result : 
+ * 	만원 : 56장
+ * 	천원 : 7장
+ * 	백원 : 8장
+ * 	십원 : 9개
+ */
