@@ -1,11 +1,11 @@
-package ex02.array;
-
-import java.util.Scanner;
-
-public class QuizEx1 {
-	public static void main(String[] args) {
-		
-		
+//package ex02.array;
+//
+//import java.util.Scanner;
+//
+//public class QuizEx1 {
+//	public static void main(String[] args) {
+//		
+//		
 //		// 2.홀수 인덱스 위치 데이터만 출력
 //		for ( int i = 0; i < a.length; i++ ) {
 //			if ( i % 2 == 0) continue;
@@ -49,38 +49,48 @@ public class QuizEx1 {
 //				
 //			} // end for
 //		System.out.println(seek + "의 개수는 : "+count+"개");			
-
-		
-	} // end main
-} // end class
-
-
-
-//package Quiz;
-//
-//import java.util.Iterator;
-//
-//public class QuizEx1 {
-//	public static void main(String[] args) {
-//		// 배열 여러개 데이터 중에서 7의 개수를 찾아 주세요.
-//		
-//		int[] a = new int[] {7,3,7,8,1,9,7,100,12,7,33,7};
-//		
-//		int seek = 7; // Scanner로 입력받아도 됨
-//		int count = 0;
-//		
-//		
-//		for (int i = 0; i < a.length; i++) {
-//				if ( a[i] == seek ) { //a[i] == 7 로 바로 적어도 가능
-//					count++;
-//				} //  end if
-//				
-//			} // end for
-//		System.out.println("7의 개수는 : "+count+"개");			
 //
 //		
 //	} // end main
 //} // end class
+
+
+
+package ex02.array;
+
+import java.util.Iterator;
+
+public class QuizEx1 {
+	public static void main(String[] args) {
+//		배열 여러개 데이터 중에서 7의 개수를 찾아 주세요.
+//		추가) 7이 있는 인덱스 값은?
+		
+		int[] a = new int[] {7,3,7,8,1,9,7,100,12,7,33,7};
+		
+		int seek = 7; // Scanner로 입력받아도 됨
+		int count = 0;
+		
+		
+		for (int i = 0; i < a.length; i++) {
+				if ( a[i] == seek ) { //a[i] == 7 로 바로 적어도 가능
+					count++;
+				} //  end if
+				
+//				추가) 7이 있는 인덱스 값은?
+				if ( a[i] == seek ) {
+					System.out.print(seek + "이 존재하는 인덱스 값은 : ");
+					System.out.println(i + " ");
+					
+				}
+			} // end for
+		System.out.println("7의 개수는 : "+count+"개");		
+		
+
+		
+
+		
+	} // end main
+} // end class
 
 
 //package Quiz;

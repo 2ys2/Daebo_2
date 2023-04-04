@@ -1,8 +1,8 @@
-package ex02.array;
+package homework;
 
 //import java.util.Scanner;
 import java.util.Random;
-public class QuizEx2 {
+public class Quiz_강수량 {
 	public static void main(String[] args) {
 
 //		추가) 원하는 달(월)을 입력받아서 일수를 결정한다. (switch case)
