@@ -15,10 +15,10 @@ public class MainEntry {
 		int y = sc.nextInt();
 		int result;
 		
-		if ( y == 0 ) {
-			System.out.println("0으로 나눌 수 없습니다.");
-			System.exit(0); //return
-		}
+//		if ( y == 0 ) {
+//			System.out.println("0으로 나눌 수 없습니다.");
+//			System.exit(0); //return
+//		}
 		
 		try {
 			result = x / y;

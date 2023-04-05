@@ -18,7 +18,7 @@ public class ArraysSortTest {
 		System.out.println(a.hashCode());
 		
 		
-		System.out.println("\n\n오름차순 - nsort 후 출력 : ");
+		System.out.println("\n\n오름차순 - sort 후 출력 : ");
 		for ( int i = 0; i < a.length; i++ ) {
 			System.out.print(a[i] + "\t");
 		}
