@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+C:\Users\KOSA\Downloads\src.selection\ex06\.metadata\.plugins\org.eclipse.jdt.core

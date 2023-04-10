@@ -40,8 +40,14 @@ public class MainEntry {
 		System.out.println(str);
 	}
 	
-	public static void line(int n, String str) { // array : length 필드 <- 배열의 길이(크기), String : length() <-문자열의 길이
-		for ( int i = 0; i < n; i++ ) {
+	public static void line(int n, int y, String str) { // array : length 필드 <- 배열의 길이(크기), String : length() <-문자열의 길이
+		if ( n > y ) { 
+			int temp = n;
+			n = y;
+			y = temp;
+		}
+		
+		for ( int i = n; i < y; i++ ) {
 			System.out.print(str + " ");
 		}
 		System.out.println();
