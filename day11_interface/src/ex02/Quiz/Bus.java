@@ -13,3 +13,24 @@ public class Bus implements Trans {
 	}
 
 }
+
+//@Override
+//publice void move() {
+//	while( speed < 5 ) {
+//		speed += (accelerator * 5);
+//		System.out.println("Accelerating..." + speed);
+//		
+//		try {
+//			Thread.sleep(500);
+//		} catch ( Exeption e ) {
+//			e.printStackTrace();
+//		}
+//			
+//		}
+//	}
+//}
+//
+//public void stop() {
+//	speed = 0;
+//	System.out.println("Emergency stop.....");
+//}
