@@ -1,4 +1,4 @@
-package exo03.IO;
+package ex03.IO;
 
 public class InputStreamEx {
 	public static void main(String[] args) {

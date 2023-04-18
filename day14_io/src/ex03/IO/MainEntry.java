@@ -1,4 +1,4 @@
-package exo03.IO;
+package ex03.IO;
 
 import java.io.IOException;
 import java.io.InputStream;
