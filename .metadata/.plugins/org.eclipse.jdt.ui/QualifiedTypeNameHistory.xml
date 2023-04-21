@@ -39,4 +39,8 @@
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.util.concurrent.locks.ReentrantReadWriteLock.ReadLock"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="ex02.runnable.UserRunnable"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="java.lang.Thread.State"/>
+    <fullyQualifiedTypeName name="ex03.GrapicThread"/>
 </qualifiedTypeNameHistroy>
