@@ -1,0 +1,1213 @@
+ >> day20- 23/04/21
+
+  Thread 
+   - 1의 CPU는 1의 작업 
+          "시간차"
+
+   Thread class
+   Runnable interface
+
+   public void run() {   }  // 스레드 실행부(구현부)
+
+ > Syncronized
+
+ > inner class
+
+ > event
+
+ > GUI : awt, swing, JavaFX ( jdk 7.0 이후~ )
+
+ > Lambda Expression
+
+ > network
+
+ > JDBC
+
+=====================================================
+>> day19 - 23/04/20
+
+문제] 비만도 측정 프로그램 작성 - collection, file, io 이용하기
+    추가 / 삭제 / 출력 / 수정 / 저장 처리할것
+
+    이름/성별/키/몸무게/BMI지수 받을 변수
+
+ 몸무게, 키를 입력 받아서  BMI 계산하기
+ BMI = 몸무게 / ( (키 / 100.0) * (키 / 100.0) ); 
+
+  남 : (신장cm - 100) X 0.9
+  여 : (신장cm - 100) X 0.85
+-
+판정>
+18.5 미만 저체중
+18.5 ~ 22.9  정상
+23.0 ~ 24.9  과체중
+25.0  이상 비만 
+
+결과] 
+이도연님 저체중이시네요. 살 좀 찝시다.
+OOO님 과체중이십니다. 그만 먹자!
+XXX님 정상이시네요. 유지하세요!!
+
+
+ > Thread 
+   - 1의 CPU는 1의 작업 
+          "시간차"
+
+   Thread class
+   Runnable interface
+
+   public void run() {   }  // 스레드 실행부(구현부)
+
+ > Syncronized
+
+ > inner class
+
+ > event
+
+ > GUI : awt, swing, JavaFX ( jdk 7.0 이후~ )
+
+ > Lambda Expression
+
+ > network
+
+ > JDBC
+
+--------------------------------------------------------
+(4) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ < 4번째 과제 : DataBase >
+ >> 통합 과제 - 데이터베이스 종류(ORDBMS, NoSQL) 및 장단점 ,
+	        DML(select, insert, update, delete), DCL, DDL 명령어 형식 
+	        주요 용어 조사  
+
+	--- 참고 사이트 : http://www.dbguide.net/  --> 이전함
+ 		         https://dataonair.or.kr
+		         http://www.javatpoint.com/sql-tutorial
+
+    https://han.gl/gxFdkm
+
+=======================================================
+
+>> day18 - 23/04/19
+
+> IO ( Input  Ouput ) <----- java.io package
+
+    - File
+ URL
+ URI
+
+  DataInputStream		 / DataOutputStream
+  ObjectInputStream 	 / ObjectOutputStream
+ 
+   readXXX();	     				writeXXX(); 	
+       자료형		  	     			  자료형
+
+
+ > RandomAccessFile
+
+ > Thread 
+
+ > Syncronized
+
+ > inner class
+
+ > event
+
+ > GUI : awt, swing, JavaFX ( jdk 7.0 이후~ )
+
+ > network
+
+ > JDBC
+
+--------------------------------------------------------
+(3) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <3번째 과제 : Design Pattern >
+     1팀(기석팀) :  Abstract Factory -승현
+     2팀(승원팀) :  Decorator - 지효
+     3팀(재진팀) :  Factory Method - 규창
+     4팀(명관팀) :  Proxy - 재경
+     5팀(근호팀) :  Prototype Pattern - 승윤
+     6팀(성준팀) :  Singleton - 지연
+
+
+ 발표순서 : 규창(3) > 승현(1) > 지효(2) > 지연(6) > 재경(4) > 승윤(5)
+
+
+=================================================================
+>> day17 - 23/04/18
+
+> 1차 코딩테스트 
+ 
+> IO ( Input  Ouput ) <----- java.io package
+
+  			Input			  			 Output
+   byte		   ~~~~InputStream	|	~~~OutputStream
+   charater	   ~~~~Reader		|	~~~Writer
+
+  -- InputStream : 입력의 최상위 클래스 : read()
+  -- OutputStream : 출력의 최상위 클래스 : write()
+
+문제1] 사직연산 프로그램 작성하기 (io객체 이용하기)
+result> su1 = 3
+		 su2 = 5
+        op = *
+   3 * 5 = 15
+
+
+  - File
+
+ 
+
+===================================================
+>> day16 - 23/04/17
+
+> Collection(자료구조)
+
+  2) List : 순서 있고, 중복허용한다
+    - 변수 --> 배열( 고정길이 )  --> 가변길이
+     int[] arr = new int[90]; 
+     
+     Vector <---- jdk 1.x ,  가변길이,  동기화지원
+     ArrayList  <--- jdk 2.x ,  가변길이,  동기화 지원안함
+	  	검색, 대량의 데이터 삽입/삭제
+
+     LinkedList  <--- data 삽입/삭제 수월함
+
+  메서드 설명 
+boolean offer() Queue(큐)에 객체를 넣는다 
+poll() Queue(큐)에서 데이터를 꺼내온다. 만일 Queue(큐)가 비어있다면 null 을 반환. 
+peek() 큐의 맨 아래 있는 객체를 반환한다. 이 때 객체를 큐에서 제거하진 않는다
+
+    - LinkedList 참고 사이트
+     http://alecture.blogspot.com/2012/10/linkedlist.html
+
+     Stack     LIFO
+     Queue <-- interface   FIFO 
+
+문제1] 상속, 컬렉션 사용(배운것 총동원!!!)
+    Person <---- Worker  /  Student class 만들기
+     부모              자손     /   자손 
+
+
+
+  > Generic(제네릭)  :     <T> 
+
+  class Point {
+	int x, y;
+  }
+
+  class GenericEx<T> {
+	T  x, y;
+  }
+
+
+ > IO ( Input  Ouput ) <----- java.io package
+
+  			Input			   Output
+   byte		   ~~~~InputStream	|	~~~OutputStream
+   charater	   ~~~~Reader		|	~~~Writer
+
+  -- InputStream : 입력의 최상위 클래스 : read()
+  -- OutputStream : 출력의 최상위 클래스 : write()
+
+ 
+
+===========================================================
+>> day15 - 23/04/14
+
+ > MVC (Model2)
+   Model <--- DB를 클래스로 만든다.
+   View  <--- main
+   Controller <--- 뷰 와 모델을 연결 역할 
+
+ > Collection(자료구조)
+
+  2) List : 순서 있고, 중복허용한다
+    - 변수 --> 배열( 고정길이 )  --> 가변길이
+     int[] arr = new int[90]; 
+     
+     Vector <---- jdk 1.x ,  가변길이,  동기화지원
+     ArrayList  <--- jdk 2.x ,  가변길이,  동기화 지원안함
+	  	검색, 대량의 데이터 삽입/삭제
+
+     LinkedList  <--- data 삽입/삭제 수월함
+
+     Stack     LIFO
+     Queue <-- interface   FIFO 
+
+
+  3) Map : key / value 한쌍으로 처리. ( set + list )
+
+  문제] Video class 
+     no  비디오번호
+     title 비디오제목
+     category  장르
+     lend   대여여부
+     lendName  대여자(고객명)
+     lendDate   대여일자(오늘날짜 입력하심 되요)
+
+     Video 추가 / 삭제 / Video 리스트 출력 / 수정 / 프로그램 종료  출력하는 프로그램 작성하기.
+
+
+ 
+
+
+===============================================
+>> day14 - 23/04/13
+
+> API  
+
+  java.util package
+   Random class
+   Scanner class
+   날짜관련,...
+   형식지정,..
+   StringTokenizer
+   ....
+
+   java.text  package
+   SimpleDateFormat
+   ChoiceFormat / Comparator / MessageFormat .... 
+
+
+ > Collection(자료구조): 시스템에 효율적으로 데이터를 조작, 저장하는 방법에 대한 연구
+ 
+  1) Set  : 순서없고, 중복허용하지 않음
+       HashSet  / TreeSet
+
+  참고: https://mangkyu.tistory.com/101
+
+ 2) List : 순서 있고, 중복허용한다
+    - 변수 --> 배열( 고정길이 )  --> 가변길이
+     int[] arr = new int[90]; 
+     
+     Vector <---- jdk 1.x ,  가변길이,  동기화지원
+     ArrayList  <--- jdk 2.x ,  가변길이,  동기화 지원안함
+	  	검색, 대량의 데이터 삽입/삭제
+
+     LinkedList  <--- data 삽입/삭제 수월함
+
+     Stack     LIFO
+     Queue <-- interface   FIFO 
+
+
+ 문제] Customer class
+   no, name, address, tel  field 
+   생성자함수, set/get method
+
+  ArrayList or Vector 이용해서 
+  고객 추가 / 삭제 / 고객 리스트 출력 / 수정 / 프로그램 종료  출력하는 프로그램 작성하기.
+
+
+
+--------------------------------------------------------
+(3) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <3번째 과제 : Design Pattern >
+     1팀(기석팀) :  Abstract Factory
+     2팀(승원팀) :  Decorator
+     3팀(재진팀) :  Factory Method
+     4팀(명관팀) :  Proxy
+     5팀(근호팀) :  Prototype Pattern
+     6팀(성준팀) :  Singleton
+
+==========================================================
+>> day13 - 23/04/12
+
+ > API  <----- 자바에서 자주 쓰는 클래스들 소개!!! 
+  java.lang package
+
+   Object
+   String
+   StringBuffer   <--- JDK 1.x  ,  thread 
+   StringBuilder  <--- JDK 5.x
+   ....
+
+ Wrapper class : 기본 자료형에 대응되는 클래스형 자료형
+ 기본자료형		클래스형(레퍼런스 또는 참조형)자료형
+  int				Integer
+  float				Float
+  double			Double
+  char				Character
+  ....				....
+
+
+-------------------------------------------------------
+(2) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <2번째 과제 : UML >
+     1팀(기석팀) :  Class Diagram / Object Diagram	 - 광우
+     2팀(승원팀) :  Use Case Diagram / Deployment Diagram  - 승원
+     3팀(재진팀) :  Sequence Diagram / Interaction Diagram  - 재진
+     4팀(명관팀) :  Collaboration Diagram / StateChart Diagram  - 명관
+     5팀(근호팀) :  Activity Diagram / Communication Diagram  - 윤배
+     6팀(성준팀) :  Component Diagram / Package Diagram - 혁진
+
+ 발표순서 : 재진(3) > 광우(1) > 승원(2) > 윤배(5) > 명관(4) > 혁진(6)
+
+ 참고 : https://www.nextree.co.kr/p6753
+       https://velog.io/@khyunjiee/UML-Class-Diagram
+
+
+==========================================================================
+>> day12 - 23/04/11
+
+  - 다중 상속 구현,...
+
+  ex02.Abstract  Shape.java
+  ex04.multiImplements  Test.java
+  ex02.Interface  IDraw.java
+
+ > 사용자 예외 만들기
+
+ > static member <--- 공유
+   호출방법>
+        객체명.스태틱멤버 또는 스태틱멤버함수()
+        클래스명.스태틱멤버 또는 스태틱멤버함수()
+
+  > enum 열거형 - 새로운 클래스 타입을 정의하는것
+      - 특정한 값만을 가질 수 있는 데이터 타입을 정의 할때 필요하다.
+   형식>
+      [접근지정자] enum 열거형이름 { 필요한 상수들 나열,.....}
+
+  > API  <----- 자바에서 자주 쓰는 클래스들 소개!!! 
+  java.lang package
+
+  Object
+  String
+
+
+=======================================
+>> day11 - 23/04/10
+
+ > OOP(객체지향)
+    - 클래스 설계  
+
+ > inheritance(상속)
+
+ > abstract class (추상클래스)
+   - abstract 
+   - 미완성 클래스 <---- 자체적으로 객체 생성할 수 없다.
+       (단, 상속 받은 자손 클래스로는 객체 생성 할 수 있다.)
+     - 추상메소드를 갖고 있다.
+      public void show() {   }  //일반메소드
+      public abstract void show();  //추상메소드 - 몸체(블럭)를 갖지 않는다.
+
+  형식>
+	public abstact class Point{ //부모추상클래스
+
+		void disp() {   }
+ 		abstract void show(); //추상메소드
+    }
+
+    class Sub extends Super {  //자손(서브)클래스
+
+		추상메소드 오버라이드해야한다.
+    }
+
+ > override (재정의) 
+  함수명, 매개변수, 리턴타입까지 모두 같은 함수.
+
+ > 다형성 : overload, constructor, abstact class 로도 가능함.
+
+문제1] Trans 추상클래스 <--- 부모는 모든 자손에게 상속할 수 있는 최소한의것
+   추상메소드 start() / stop()
+
+   public String name(String name) {
+ 	return name; 
+   }
+
+   sub class : Subway / Bus / Biclycle / Plain
+  
+    MainEntry 에서 메인 함수 구현하기
+
+
+ > interface 
+ - 클래스 아님.(객체 생성 안됨)
+  - implements
+  - 추상메소드, 상수만 가질 수 있다. ( abstract, final 생략 가능 )
+  - 다중 상속 구현,...
+
+
+문제2] Trans interface  이것도 한번 프로그래밍 해보세요.
+   추상메소드 start() / stop()
+    sub class : Subway / Bus / Biclycle / Plain
+    MainEntry 에서 메인 함수 구현하기
+
+
+> final 
+ class <--- 상속금지
+ method <--- overried 금지
+ field <--- 값 변경 금지(상수)
+
+
+=========================================
+>> day10 - 23/04/07
+
+ > OOP(객체지향)
+    - 클래스 설계  
+
+ 문제1] class TV {
+	 color,  channel; 
+	// setter / getter method
+	// output 
+       }
+
+ > Constructor (생성자) 함수 - 멤버변수의 초기화
+   - 클래스명과 동일하다.
+   - 리턴타입 없음( void 조차 사용하지 않음 )
+   - 중복정의 가능함( overload 가능 - 중복함수 )
+   - default constructor 갖고 있음.
+       (단, 사용자가 생성자 함수를 재정의 하면 디폴트 생성자 함수 기능 상실함)  
+
+ > 디폴트 생성자 함수 / API 
+    cmd> 해당 자바 코드가 있는 곳으로 이동한다.
+    javadoc.exe 파일로 도큐먼트 컴파일한다.
+
+ C:\daebo_th2\1_Java\workspace\day10_inheritance\src\ex02\defaultConstructor>javadoc MainEntry.java
+
+  -한글깨짐 방지
+ C:\daebo_th2\1_Java\workspace\day10_inheritance\src\ex02\defaultConstructor>javadoc -encoding UTF-8 MainEntry.java
+
+ > this : 자기자신,객체 생성 될때 그 객체의 시작 주소
+     this() : 생성자함수의 다른 이름
+
+   super : 부모 클래스의 멤버에 접근 할 수 있는 인스턴스
+   super() : 부모클래스의 생성자함수 
+     Point pt = new Point();
+     pt.disp();
+
+문제2] class Sawoen {
+	사번, 이름, 직급, 부서, 급여, 연락처
+	생성자함수 - 3개 정도 
+	setter /getter method
+	output method	
+    }
+
+    메인에서 객체 생성해서 데이터 출력하기 
+
+ > inheritance(상속)
+  - extends
+  - 단일상속만 지원
+  - super 
+  - 재사용
+  - 확장 
+
+형식> 
+ class Super {  // 부모 클래스
+
+ }
+
+ class Sub  extends  Super {  // 자식클래스 
+
+ }
+
+문제3]  Employee  <--------- Regular  <--------- Sales 
+  사번, 이름, 부서, 연락처        급여		            커미션 
+              
+
+             PartTime
+             근무일수 * 시간당 단가
+          
+    멤버변수, 
+     getter / setter method
+    output  <--   toString ovrried 
+    user method  <-- 계산 관련 함수 등등
+
+ > override (재정의)
+
+
+--- 
+https://www.comcbt.com/
+
+
+===============================
+>> day09 - 23/04/06
+
+ > instance method vs static method
+
+ > 가변길이 함수 
+
+ > debugging (디버깅) 방법
+
+ > OOP(객체지향)
+
+형식> 
+ class  ClassName {  
+	 접근지정자  자료형 멤버변수1;
+	 접근지정자  자료형 멤버변수2;
+
+      접근지정자 리턴타입 멤버함수() {  .....   }
+      접근지정자 리턴타입 멤버함수() {  .....   }
+	  ......
+ }
+
+문제] class Score {    } 
+        class MainEntry {   }
+
+*****************************************
+ ** 용어 조사
+ class
+ 정보은닉(캡슐화) / 상속 / 다형성 / 추상화
+ 접근제한자 
+ 생성자함수
+ 멤버변수 / 멤버 함수
+ overload(중복함수)
+ override
+ object / instance
+ interface
+ abstract 
+ this / static 
+
+-------------------------------------------------------
+(2) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <2번째 과제 : UML >
+     1팀(기석팀) :  Class Diagram / Object Diagram	 
+     2팀(승원팀) :  Use Case Diagram / Deployment Diagram  
+     3팀(재진팀) :  Sequence Diagram / Interaction Diagram  
+     4팀(명관팀) :  Collaboration Diagram / StateChart Diagram  
+     5팀(근호팀) :  Activity Diagram / Communication Diagram  
+     6팀(성준팀) :  Component Diagram / Package Diagram 
+
+==========================================
+>> day08 - 23/04/05
+
+ > Method(함수)
+ 메인함수 부담 줄이고, 반복적인 코드를 함수로 만들어서 사용
+  - instance method : 객채 생성하고 사용해야함(메모리상에 할당이 되어야....)
+     ex) Scanner sc = new Scanner(System.in); 
+          int x = sc.nextInt(); <--- nextInt() 등등,...
+  - static method :  객체 생성 없이 바로 사용 가능함 ex) Math.random()
+	object.methodName();
+	ClassName.methodName();  // <---
+
+ - 매개변수의 유무 / 리턴타입 유무
+ 1) 매개변수 없고, 리턴타입 없는 경우
+    public returnType methodName() {  }
+
+ 2) 매개변수 있고, 리턴타입 없는 경우
+    public returnType methodName(parameter var1, parameter var2,.... ) {  }
+
+ 3) 매개변수 없고, 리턴타입 있는 경우
+    public returnType methodName( ) {  return  value;  }
+
+ 4) 매개변수 있고, 리턴타입 있는 경우
+    public returnType methodName(parameter var1, parameter var2,....  ) 
+	{  return  value;  }
+
+ > return 
+ return 값;   // 오직 1개
+  예) int x = 3, y = 5;
+       return  x+y;    // return x, y;   <--- error
+
+  return;   // 제어권 넘김
+
+
+ > overload(중복함수)
+  함수명 같고, 매개변수의 개수가 다르거나
+  매개변수 개수가 같다면 자료형이 다른 함수
+
+  cf) override <--- 상속
+
+문제] 성적처리 프로그램을 함수로 분리한다.
+ 입력함수 input() - 이름, 국어,영어,전산 점수
+ 출력함수 output()
+ 총점_평균 구하는 함수 total_avg(~~~~ )
+ 학점 구하는 함수 grade(~~~)
+ 메인함수 
+ 
+
+ > 가변길이 함수 
+
+ > debugging (디버깅) 방법
+
+ > OOP(객체지향)
+
+--------------------------------------------------------
+(1) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <1번째 과제 : 자료구조 - 정렬 >
+
+     1팀 : 기석팀 - 선택정렬  - 영서
+     2팀 : 승원팀 - 퀵정렬  - 용민
+     3팀 : 재진팀 - 삽입정렬 - 영회
+     4팀 : 명관팀 - 병합(머지)정렬 - 승준
+     5팀 : 근호팀 - 버블정렬 - 근호
+     6팀 : 성준팀 - 힙정렬 - 성준
+
+    발표순서 : 용민(2팀) > 영서(1팀) > 영회(3팀) > 성준(6팀) > 승준(4팀) > 근호(5팀) 
+
+ 자료구조 : 자료의 조직, 관리, 저장을 의미한다. 
+ 알고리즘 : 어떠한 문제를 해결하기 위해 정해진 일련의 절차이다. 
+
+입력 - 알고리즘은 0 또는 그 이상의 외부에서 제공된 자료가 존재해야한다.
+출력 - 알고리즘은 최소 1개 이상의 결과를 가져야한다.
+명확성 - 알고리즘의 각 단계는 명확하여 애매함이 없어야 한다.[5]
+유한성 - 알고리즘은 단계들을 유한한 횟수로 거친 후 문제를 해결하고 종료해야 한다. 알고리즘의 한 단계 이후 m의 값은 n 보다 작으며, m != 0[6]이면 n의 값은 다음 번 단계에서 줄어든다.
+효과성 - 알고리즘의 모든 연산들은 사람이 종이와 연필을 이용하여 유한한 시간 안에 정확하게 수행할 수 있을 정도로 충분히 단순해야 한다.
+
+
+ http://openparadigm.tistory.com/20
+ 알고리즘의 성능을 평가할 수 있는 방법
+
+- O표기법은 알고리즘의 최악의 성능을 표시해준다. ( Big O ) 
+- Ω표기법은 알고리즘의 최고의 성능을 표시해준다.  ( 오메가 == 옴 )
+      전산학에서 알고리즘의 시간 복잡도인 Ω 표기법을 의미한다.
+- θ표기법은 정확한 알고리즘의 성능을 표시해준다.  ( 테타 )
+      전산학에서 알고리즘의 시간 복잡도인 Θ 표기법을 나타낸다.
+
+ http://wowrupi.tistory.com/3
+ 
+   - 자료구조 : https://m.hanbit.co.kr/channel/category/category_view.html?cms_code=CMS8073601837
+   - 힙 :  https://zeddios.tistory.com/56
+   - Quick : https://www.youtube.com/watch?v=kDgvnbUIqT4
+   - Merge : https://www.youtube.com/watch?v=dENca26N6V4
+   - Insert : https://www.youtube.com/watch?v=EdIKIf9mHk0
+
+   참고) https://www.youtube.com/watch?v=FCAtxryNgq4
+           https://www.youtube.com/watch?v=FN61luZl6GU&list=PLLcbGhhl4sQDIp8j8L-OuI9n7oOuEGrnJ
+           https://roytravel.tistory.com/328
+
+
+==================================
+>> day07 - 23/04/04
+
+ > Array(배열)
+   자료형[][][] 배열명 = new 자료형[면크기][행크기][열크기]; //면,행,열
+   int[][][] a = new int[2][2][3];
+
+ > sort (정렬)
+  선택, 버블 소트
+
+  https://www.youtube.com/watch?v=gARC8MApdcY
+  https://www.youtube.com/watch?v=lyZQPjUT5B4&t=6s
+
+문제] 등수(석차)까지 구하는 프로그램 작성
+/*
+	이도연님의 성적표 ***** 
+	국어 : 110 영어 : 110 전산 : 154
+	총점 : 0 평균 : 27.5  평점(학점) : F  석차(등수) : 1
+*/
+
+
+ > Method(함수)
+
+
+
+**********************************************
+>> 온라인에서 자바 코딩하기
+ https://www.w3schools.com/java/
+ http://www.tcpschool.com/java/intro
+ http://www.tcpschool.com/examples/tryit/tryJava.php?filename=Intro01
+ https://ideone.com/
+
+================================
+>> day06 - 23/04/03
+
+ > 제어문
+
+ 4) 기타
+    break
+    continue
+
+ > 메모리 구조
+
+ > 배열(Array)   int arr[30]; or  int[] arr = new int[30];
+  - 일괄처리
+  - 동일한 데이터 모임
+  - 메모리상에 연속적 나열
+  - index는 0부터 시작함
+  - for문이랑 친함
+
+  >>형식>
+   자료형[] 배열명 = new 자료형[크기]; 
+   int[] arr = new int[30];
+
+   자료형[][] 배열명 = new 자료형[행크기][열크기];
+   int[][] a = new int[2][3];
+
+   자료형[][][] 배열명 = new 자료형[면크기][행크기][열크기];
+   int[][][] a = new int[2][2][3];
+
+ 문제] 임의의 데이터 7개 입력 받고, 찾을 임의의 데이터도 입력 받거나 해서
+          개수 구하는 프로그램 작성
+
+
+ > 확장(개선된) for문
+
+    for(자료형 변수명 : 컬렉션명 or 배열명) {   
+	           반복구문;
+    }
+
+
+ > 함수
+
+
+===========================
+>> day05 - 23/03/31
+
+3) 반복문
+    for, 확장(개선된) for 
+    while
+    do~while
+
+for(초기값; 조건; 증감식) {
+	반복구문 ;
+}	
+
+for(자료형 변수명 : 컬렉션명 또는 배열명) {
+	반복구문 ;
+}
+
+ - 이중(중첩) for
+
+ for(초기값; 조건1; 증감식) {
+
+
+	for(초기값; 조건2; 증감식) {
+
+		반복구문 ;
+
+	}
+}
+
+int a = 1, b ;
+  for(a = 1, b = 2; a <= 2 ; a++, b+=2){
+	S.o.pt( a + "\t" );
+  }
+
+ - 초기값/ 증감식은 2개 이상 기재 가능
+   (단, 조건은 오직 1개여야함 )
+ - 초기값/ 증감식은 생략 가능
+   (단, 조건 생략하면 무한루프임)
+
+ - 무한루프 
+  for(  ;  ;  ) {
+     S.o.pt( a + "\t" );
+    if(조건) break;   //탈출구문
+  }
+
+
+과제3] 
+1. 	2.	3.	4.
+*	*****	    *	*****
+**	****	   **	 ****
+***	***	  ***	  ***
+****	**	 ****	   **
+*****	*	*****	    *
+
+5.		6.
+    *		 *********
+   ***		  *******
+  *****		   *****
+ *******		    ***
+*********	   	     *
+
+	7.			
+	    *		
+	   ***		
+	  *****		
+	 *******	
+	*********	
+	 *******	
+	  *****		
+	   ***		
+	    *
+           8.	
+	    *		
+	   * *		
+	  *   *		
+	 *      *	
+	*        *	
+	 *      *	
+	  *   *		
+	   * *		
+	    *		
+
+cf) 중첩 while , do~while 
+
+  int a = 1, b = 1;
+
+   do{
+	// 안쪽 변수의 초기화 
+	do {
+
+		S.o.pt( b + "\t");
+		b++;	
+
+	} while( b <= 3 ); 
+	
+	a++;
+	S.o.pln();
+
+  } while( i <= 2 );
+
+
+ 4) 기타
+    break
+    continue
+
+-- 제어문 종합 문제] 성적처리 프로그램
+  1) 점수 : 0~100 점까지만 입력 받게 처리 할것
+  2) 원하는 만큼 성적 입력 받아서 출력하기
+
+과제1] 1 + (1 + 2) + (1 + 2 + 3) + (1 + 2 + 3 + 4) + (1 + 2 + 3 + 4 + 5) = ? 35
+과제2] (-1) + 2 + (-3) + 4 + (-5) + ... + (-9) + 10 = ?   5
+과제3] 1/2 + 2/3 + 3/4 + 4/5 + 5/6 + 6/7 + 7/8 + 9/10 = ?  7.07
+
+
+ > import / export 방법
+
+ > 난수 구하기 - 2가지방법
+ 1) Math.random() - java.lang
+
+   Math.random() * n <==== 0 ~ n-1 값 추출됨
+
+ 2) Random class - java.util package
+	nextXXX();
+	       자료형
+	nextInt();
+	nextDouble(), 
+	nextFloat(),....
+
+       rand.nextInt(n);  // 0 ~ n-1 값 추출함
+
+문제1] 업/다운 게임 프로그램 작성 (난수 이용)
+1~100 숫자 중에서 임의의 난수 추출해 놓고, 사용자는 5번의 기회를줘서 입력 받는다.  
+그 입력 받은 숫자와 추출한 난수가 같은지를 판정하는 프로그램 작성
+
+문제2] 로또 프로그램
+  1~45까지 숫자 중 6개 추출 
+   
+
+==============================
+>> day04 - 23/03/30
+
+ > 제어문
+ 1) 비교문
+    if ~ else
+
+ 문제] 윤년/평년 판정 프로그램 프로그램 작성
+  if( year % 4 == 0 ) {
+	if( year % 100 != 0 || year % 400 == 0 ) 
+		"윤년";
+  }
+
+ 2) 선택문
+   switch ~ case
+
+문제] 이름 입력 받고, 국어,영어,전산 점수 입력 받아서 
+ 	  총점, 평균까지 구하는 프로그램 작성
+ 	  
+ 	  이도연님의 성적표**************
+ 	  국어 : 100, 영어 : 100, 전산 : 100
+ 	  총점 : 300, 평균 : 100.0, 평점(학점) : A
+
+문제] 대문자 <--> 소문자 로 출력하는 프로그램 작성
+  'A' : 65 ~ 'Z' : 90     'a' : 97 ~ 'z' : 122
+
+문제2] if , switch
+  점수를 0~100
+     100~70 점까지 "상"
+      69~60 점까지 "보통"
+      59~    이하는 "노력요망"
+
+ 3) 반복문
+   for  / 확장 for문
+   while
+   do ~ while
+
+ 4) 기타구문
+   break
+   continue
+
+ > 메모리 구조
+
+ > import / export 방법
+
+ > Exception (예외처리)
+  Java는 의무적(반드시)으로 예외처리를 해야하는 상황들이 있음.
+  -- 네트워크, 데이터베이스(JDBC), Thread, IO(입출력), File.....
+
+ 형식> 
+   try {
+	정상코드(또는 예외 발생 예측 코드);
+  } catch(Exception e) {
+	예외 발생시 처리할 코드 ;
+  }
+
+  1) try ~ catch : 직접처리 - 권장
+  2) throws  : 위임
+  3) throw  : 예외 던지기 
+
+--------------------------------------------------------
+(1) 팀(조)별 과제  - 매주 수요일 PM 2시:10 ~ 
+ <1번째 과제 : 자료구조 - 정렬 >
+
+     1팀 : 기석팀 - 선택정렬  
+     2팀 : 승원팀 - 퀵정렬  
+     3팀 : 재진팀 - 삽입정렬 
+     4팀 : 명관팀 - 병합(머지)정렬 
+     5팀 : 근호팀 - 버블정렬 
+     6팀 : 성준팀 - 힙정렬 
+
+
+=====================================
+>> day03 - 23/03/29
+
+ > 연산자 (Operator) : 우선순위 있다.
+   - 최단산쉬관논삼대콤
+ 높 <---		---> 낮
+
+ > 제어문
+ 1) 비교문
+    if ~ else
+
+ 과제1] 논리연산, 교환알고리즘, if 이용 
+ 3
+ 4
+ 5
+
+
+  5 > 4 > 3  큰 순으로 출력하는 프로그램 작성
+
+과제2] 사칙연산 프로그램 작성(예외처리하기)
+  숫자 2개 입력 받고, 연산자(+, -, *, /) 1개 입력 받아서
+    
+  result> 
+    3
+    5
+    +    
+
+   3 + 5 = 8
+
+ String strop = sc.next();   "+"    strop == "+"
+ char op = strop.charAt(0)
+
+내일까지하시면 됩니다.^^
+ ai.edu.kingsmile@gmail.com 으로 제출
+
+ 2) 선택문
+   switch ~ case
+
+  - 개선된 switch 참고 
+   https://docs.oracle.com/en/java/javase/14/language/switch-expressions.html
+
+
+ 3) 반복문
+   for  / 확장 for문
+   while
+   do ~ while
+
+ 4) 기타구문
+   break
+   continue
+
+ > import / export 방법
+
+ > 예외처리( Exception )
+
+=================================
+>> day02 - 23/03/28
+
+ > 이클립스 사용법 
+
+ > 자료형(Data Type)
+   - 기본자료형
+   - 참조형
+
+ > 연산자 (Operator) : 우선순위 있다.
+   - 최단산쉬관논삼대콤
+ 높 <---		---> 낮
+
+   - 0, 0.0, NULL 를 제외한 모든 값은 '참'이다.
+
+ 문제1] 월급을 단위로 계산하기
+	int pay = 567890;
+	
+       result :
+	만원 : 56장
+	천원 : 7장
+	백원 : 8개
+	십원 : 9개 
+
+ 문제2] int su = 12345;
+    시 : 분 : 초 
+          60초 => 1분	
+   60분
+      60초  ==> 3600
+
+   3 : 25 : 45
+
+
+ > 입력받기
+ java.io <---- Input / Output
+ java.util <---- Scanner, JDK 5부터 도입됨
+
+ nextXXX()
+       자료형
+ nextInt()
+ nextFloat()
+ nextDouble()
+ next() vs nextLine() <--- String input method
+ 
+  cf) main method로 처리 방법
+  
+	
+ > 제어문 
+
+===================================
+>> day01 - 23/03/27
+
+ > 시스템 확인하기
+   - 메모리 64
+   - 자바 설치 유무
+
+ > JDK 설치 및 환경설정
+   - JDK : 개발 + 실행 환경
+   - JRE :  실행환경
+
+ > JDK 17 download
+  https://adoptium.net   <--- 권장
+  https://openjdk.org
+  https://www.oracle.com/java/technologies/downloads/#jdk17-windows
+
+ > Java API
+  https://docs.oracle.com/javase/8/docs/api
+  https://docs.oracle.com/en/java/javase/17/docs/api/index.html
+
+ > eclipse : 2022-06
+  https://www.eclipse.org
+
+> 접근지정자
+  public  >  protected  > default  > private
+
+> 기본 구문 
+
+ package > class > method > field 
+
+  public  class  ClassName {
+	public static void main(String[] args) {  //  시작점(진입점)
+		int x = 55;
+		System.out.print("Hello World!!"); // 문장 종결 기호 ;
+
+	} // end main
+
+ }  // end class
+
+
+ > 환경변수 설정
+   1. JAVA_HOME 
+      C:\Program Files\Java\jdk-17.0.6.10-hotspot
+
+    2. CLASSPATH
+       .;
+
+   3. 편집 하세요. Path 
+      %JAVA_HOME%\bin
+
+ > 컴파일 :  command mode
+  D:\DouZone_th3\1_Java\workspace>javac Hello.java
+
+   - 한글 포함 되어 에러 발생시 해결 방법
+  D:\DouZone_th3\1_Java\workspace>javac -encoding UTF-8 Hello.java
+  cmd> javac 파일명.확장자
+  
+
+ > 실행 :  command mode
+  D:\DouZone_th3\1_Java\workspace>java Hello
+  cmd> java  파일명
+
+ > 출력함수
+  print()  - 개행없이 출력 
+  printf() - 서식에 맞춰서 출력 : %d, %c, %f, %s,.....  "%문자"
+  println() - 출력 및 개행 
+
+ >컴파일
+  C:\daebo_th2\1_Java\workspace>javac FirustJava.java
+  한글 깨질시
+  C:\daebo_th2\1_Java\workspace>javac -encoding utf-8  FirustJava.java
+
+ > 실행
+  C:\daebo_th2\1_Java\workspace>java FirustJava
+
+
+ > error 처리 방법
+
+  > 주석
+ // 한줄 주석
+/* 여러줄 주석 */
+
+-----------------------------------------------------------------
+1팀 : 송기석
+2팀 : 정승원
+3팀 : 이재진
+4팀 : 심명관
+5팀 : 임근호
+6팀 : 박성준
+------------------------------------------------------------------
+
+ > 줌
+   https://sjcu-ac-kr.zoom.us/j/9275926161?pwd=K3lZcFZQdHRxS2pINk44SUdjSTdVQT09 
+   ID 927 592 6161
+   PWD : kosajava
+
+
+---------------------------------------
+1. 개인과제
+2. 팀과제
+   가) 일일과제 - 알고리즘 문제 
+   가-2) 주과제 - 발표(문서, 발표)
+   나) 미니프로젝트 - 3회 
+   다) 파이널 과제 - 1회 (최종)
+
+반장 : 곽규창 010-9210-8128
+
+
+ 
+*** 유용한 사이트 ****
+ https://www.javatpoint.com
+
+ > 전산용어
+ http://www.terms.co.kr
+ https://ko.wikipedia.org
+
+ http://www.etnews.com
+
+ https://www.codeproject.com
+
+ > 동영상 강좌 & 문제 은행
+ https://cafe.naver.com/thisisjava
+ https://cafe.naver.com/javachobostudy
+ https://www.orentec.co.kr/
+ 신입SW인력을 위한 실전 자바(Java)
+ https://www.youtube.com/playlist?list=PLieE0qnqO2kTyzAlsvxzoulHVISvO8zA9
+ https://www.opentutorials.org/course/1223
+
+
+ > 자격증
+   ocjp
+   정보처리 기사(산업기사)
+
+ > 알고리즘
+ https://www.acmicpc.net
+ https://programmers.co.kr
+ https://swexpertacademy.com/main/main.do
+-------------------------------------------------
+ - 강사컴 접속 
+ 1) 웹 접속 방법
+http://192.168.0.61/daebo_th2
+http://desktop-mm6f3ud
+
+ 2) 네트워크 접속 방법
+\\desktop-mm6f3ud  (대소문자 구분 없음)
+\\192.168.0.61
+
+  > id / pwd
+  java / java 
+
+---------------------------------------------------
+>> 이도연(영희)
+ ai.edu.kingsmile@gmail.com 
+ 010-9872-0202
+
+
+
+
+

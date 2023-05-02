@@ -3,7 +3,6 @@ package Tim_01;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Iterator;
 import java.util.TreeMap;
 
 public class homework_0424 {
@@ -29,9 +28,9 @@ public class homework_0424 {
 			
 		}
 		System.out.println(tm.size()-1);
-		for (String i : tm.keySet()) {
-			System.out.println("key = " + i + ", value = " + tm.get(i));
-			
-		}
+//		for (String i : tm.keySet()) {
+//			System.out.println("key = " + i + ", value = " + tm.get(i));
+//			
+//		}
 	}
 }
