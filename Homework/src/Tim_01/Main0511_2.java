@@ -1,77 +1,47 @@
 package Tim_01;
 
-import java.util.*;
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.StringTokenizer;
 
 public class Main0511_2 {
-	static int arr[][];
-	static boolean visit[][];
-	static int dirX[] = {0, 0, -1, 1};
-	static int dirY[] = {-1, 1, 0, 0};
-
-	static int count = 0, number = 0;
-	static int nowX, nowY, N;
-
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-		List<Integer> list = new ArrayList<>();
+		StringTokenizer st;
+		Queue<Integer> q = new LinkedList<>();
 
-		N = Integer.parseInt(br.readLine());
-		arr = new int[N][N];
-		visit = new boolean[N][N];
-
-		for(int i=0; i<N; i++) {
-			String str = br.readLine();
-
-			for(int j=0; j<N; j++) {				
-				arr[i][j] = Character.getNumericValue(str.charAt(j));
-			}
+		st = new StringTokenizer(br.readLine());
+		int N = Integer.parseInt(st.nextToken());
+		int K = Integer.parseInt(st.nextToken());
+		for ( int i = 0; i < N; i++ ) {
+			q.add(i+1);
 		}
 
-		for(int i=0; i<N; i++) {
-			for(int j=0; j<N; j++) {
-
-				if(visit[i][j] == false && arr[i][j] == 1) {
-					count = 0;
-					number++;
-					DFS(i, j);	
-					list.add(count);
-				}
-
-			}
+		StringBuilder sb = new StringBuilder();
+		sb.append("<");
+		int count = 0;
+		while(!q.isEmpty()) {
+			count++;
+			if(count % K == 0)
+				sb.append(q.poll()).append(", ");
+			else
+				q.offer(q.poll());
 		}
+		sb.setLength(sb.length()-2);
+		sb.append(">");
+		System.out.println(sb);
+		
+	}
+}
 
-		Collections.sort(list);
-		bw.append(number + "\n");
-		for(int num : list) {
-			bw.append(num + "\n");
-		}
+//		ArrayList<Integer> arr = new ArrayList<>();
+//		System.out.println(arr.toString().replace('[', '<').replace(']', '>'));
+//System.out.print("<");
+//for(int i = 0; i < N-1; i++){
+//    System.out.print(arr[i]+", ");
+//}
+//System.out.print(arr[N-1]+">");
 
-		bw.flush();
-		bw.close();		
-	} // End of main
-
-	static void DFS(int x, int y) {
-		visit[x][y] = true;
-		arr[x][y] = number;
-		count ++;
-
-		for(int i=0; i<4; i++) {
-			nowX = dirX[i] + x;
-			nowY = dirY[i] + y;
-
-			if(Range_check() && visit[nowX][nowY] == false && arr[nowX][nowY] == 1) {
-				visit[nowX][nowY] = true;
-				arr[nowX][nowY] = number;
-
-				DFS(nowX, nowY);
-			}
-		}		
-
-	} // End of DFS
-
-	static boolean Range_check() {
-		return (nowX >= 0 && nowX < N && nowY >= 0 && nowY < N);
-	} // End of Range_check
-} // End of class
