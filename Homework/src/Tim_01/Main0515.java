@@ -28,7 +28,7 @@ public class Main0515 {
 		}
 
 		int Q = Integer.parseInt(br.readLine());
-		st = new StringTokenizer(br.readLine());
+		st = new StringTokenizer(br.readLine());                                                                                           ,,
 		for (int i = 0; i < Q; i++ ) {
 			int seat = Integer.parseInt(st.nextToken());
 			System.out.println(sum[seat]);
