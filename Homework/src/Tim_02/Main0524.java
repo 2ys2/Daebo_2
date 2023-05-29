@@ -37,6 +37,30 @@ public class Main0524 {
 	}
 }
 
+/*
+// 한번만 하는법
+        // max: 가장 많이 등장하는 알파벳의 횟수
+        // maxChar:  max와 동일한 횟수로 등장하는 알파벳  초깃값을 0으로설정
+        // max와 cntArr[i](i번째 알파벳이 등장하는 횟수)가 같으면 maxChar을 확인
+        // maxChar이 0이라면 아직 max와 동일하게 등장하는 알파벳이 없으므로 maxChar을 ('A' + i)로 설정
+        // maxChar가 0이 아니라면 (초깃값이 아니라면) 이전에 이미 max와 등장횟수가 같은 알파벳이 있었다는 것이므로 max와 동일하게 등장하는 알파벳을 여러개이다.
+        // 따라서 '?'를 출력
+
+
+int alpcnt = 0; //
+		for ( int i = 0; i < cnt.length; i++ ) {
+			if ( maxcnt == cnt[i] )
+				alpcnt++;
+			}
+
+		if ( alpcnt >= 2 ) System.out.println("?");
+		else {
+			for (int i = 0; i < cnt.length; i++ ) {
+				if ( maxcnt == cnt[i] ) System.out.println( (char)(i + 'A') );
+			}
+		}
+ */
+
 
 
 /*
